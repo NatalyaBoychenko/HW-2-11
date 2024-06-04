@@ -15,7 +15,6 @@ public class TimeZoneUtil {
     public static String getZone(HttpServletRequest req) {
         int length = parseName(req).length();
         String timezone = parseName(req).substring(3,length).trim();
-        System.out.println(timezone);
         if (timezone.startsWith("-")){
             return timezone;
         } else {
