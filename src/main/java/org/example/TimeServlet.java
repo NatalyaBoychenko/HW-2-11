@@ -45,7 +45,6 @@ public class TimeServlet extends HttpServlet {
         cookies.setPath("/time");
         resp.addCookie(cookies);
 
-
         String localTime = ZonedDateTime.now().withZoneSameInstant(ZoneId.of(zone)).format(DateTimeFormatter.ofPattern(
                 "yyyy-MM-dd HH:mm:ss 'UTC${timezone}'"
         ));
@@ -73,5 +72,6 @@ public class TimeServlet extends HttpServlet {
         }
         return zone;
     }
+
 
 }
